@@ -26,7 +26,11 @@ const RegisterPage: React.FC = () => {
 	};
 
 	const handleSubmit = (e: React.FormEvent) => {
+		const formData = new FormData();
 		e.preventDefault();
+		formData.append("username", username);
+		formData.append("email", email);
+		formData.append("password", password);
 		// Add login logic here
 	};
 

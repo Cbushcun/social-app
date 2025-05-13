@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 
 const LoginPage: React.FC = () => {
+	const formData = new FormData();
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
@@ -15,6 +16,8 @@ const LoginPage: React.FC = () => {
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
+		formData.append("email", email);
+		formData.append("password", password);
 		// Add login logic here
 	};
 
